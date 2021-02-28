@@ -27,12 +27,12 @@ function LoginPage(props) {
 
         dispatch(loginUser(body))
             .then((response) => {
-                
-                // if(response.payload.loginSuccess) {
-                //     props.history.push("/")
-                // } else {
-                //     alert('Login Error')
-                // }
+                console.log(response)
+                if(response.payload === 1) {
+                    props.history.push("/")
+                } else {
+                    alert('Login Error')
+                }
             })
     }
 
